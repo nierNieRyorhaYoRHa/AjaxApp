@@ -43,3 +43,4 @@ end
 # render json: { post: item }
 # 最後に、更新したレコードをitem = Post.find(params[:id])で取得し直し、render json:{ post: item }でJSON形式（データ）としてchecked.jsに返却しています。
 
+# 変更点は2カ所で、既読や未読の情報を追加したため「メモ作成時に未読の情報を保存するようにしたこと」と、Ajaxを実現するため「レスポンスをJSONに変更したこと」です。
