@@ -98,3 +98,13 @@ setInterval(check, 1000);
 
 // addEventListenerとは、イベント発火の際に実行する関数を定義するためのメソッドです。addEventListenerメソッドは以下のようにして実行します。
 // 要素.addEventListener('イベント名', 関数);
+
+// 要点チェック
+// Array.fromとは、引数にオブジェクトを渡すと配列として返却するJavaScriptのメソッドのこと
+// XMLHttpRequestとは、サーバーにHTTPリクエストを非同期で行うことができる、Ajaxを可能にするためのオブジェクトのこと
+// openとは、リクエストを初期化できるXMLHttpRequestで定義されているメソッドのこと
+// responseTypeとはXMLHttpRequestで定義されているメソッドで、レスポンスの形式を指定するメソッドのこと
+// sendとはXMLHttpRequestで定義されているメソッドで、リクエストを送信することができるメソッドのこと
+// onloadとはXMLHttpRequestで定義されているプロパティで、レスポンス受信した場合に呼び出されるイベントハンドラーのこと
+// onerrorとはXMLHttpRequestで定義されているプロパティで、リクエストに失敗した場合に呼び出されるイベントハンドラーのこと
+// setIntervalとは、一定の間隔（時間）ごとに指定した関数などを実行できるメソッドのこと

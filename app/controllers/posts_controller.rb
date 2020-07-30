@@ -5,12 +5,11 @@ class PostsController < ApplicationController
   end
 
   def create
-    Post.create(content: params[:content])
-    redirect_to action: :index
+    post = Post.create(content: params[:content], checked: false)
+    render json:{ post: post }
   end
 
   def checked
-
     post = Post.find(params[:id])
     if post.checked then
       post.update(checked: false)
@@ -19,7 +18,7 @@ class PostsController < ApplicationController
     end
 
     item = Post.find(params[:id])
-    render json: { post: item }
+    render json:{ post: item }
   end
 
 end
@@ -44,3 +43,4 @@ end
 # render json: { post: item }
 # 最後に、更新したレコードをitem = Post.find(params[:id])で取得し直し、render json:{ post: item }でJSON形式（データ）としてchecked.jsに返却しています。
 
+# 変更点は2カ所で、既読や未読の情報を追加したため「メモ作成時に未読の情報を保存するようにしたこと」と、Ajaxを実現するため「レスポンスをJSONに変更したこと」です。
